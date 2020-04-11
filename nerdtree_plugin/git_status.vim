@@ -324,7 +324,7 @@ augroup AddHighlighting
 augroup END
 function! s:AddHighlighting()
     let l:synmap = {
-                \ 'NERDTreeGitStatusModified'    : s:NERDTreeGetIndicator('Modified'),
+                \ 'NERDTreeGitStatusModified'    : s:NERDTreeGetIndicator('Staged'),
                 \ 'NERDTreeGitStatusStaged'      : s:NERDTreeGetIndicator('Staged'),
                 \ 'NERDTreeGitStatusUntracked'   : s:NERDTreeGetIndicator('Untracked'),
                 \ 'NERDTreeGitStatusRenamed'     : s:NERDTreeGetIndicator('Renamed'),
@@ -345,7 +345,7 @@ function! s:AddHighlighting()
     hi def link NERDTreeGitStatusDirDirty Tag
     hi def link NERDTreeGitStatusDirClean DiffAdd
     " TODO: use diff color
-    hi def link NERDTreeGitStatusIgnored DiffAdd
+    hi def link NERDTreeGitStatusIgnored Special
 endfunction
 
 function! s:SetupListeners()
